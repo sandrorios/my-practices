@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    max-width: 50%;
+    margin: 30px auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+}
+p {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+    padding: 10px;
+    justify-content: space-between;
+}
+.text {
+
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    color: #fff;
+    width: 45%;
+    margin: 5px;
+}
