@@ -11,7 +11,6 @@
     max-width: 50%;
     margin: 30px auto;
     flex-wrap: wrap;
-    justify-content: space-between;
     padding: 30px;
 }
 
@@ -25,16 +24,11 @@ header h1 {
     margin-bottom: 15px;
 }
 p {
-    display: flex;
-    flex-wrap: wrap;
     font-size: 18px;
     padding: 10px;
-    justify-content: space-between;
 }
 .text {
-
-    display: flex;
-    justify-content: center;
+    text-align: center;
     background-color: #333;
     color: #fff;
     width: 45%;
