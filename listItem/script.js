@@ -49,7 +49,21 @@ function clearItems(){
     }
 }
 
+function filterItems(e){
+    let items = listItem.querySelectorAll('li');
+    let text = e.target.value.toLowerCase();
 
+    items.forEach((items) =>{
+        let itemName = items.firstChild.textContent.toLowerCase();
+        if(itemName.indexOf(text)!= -1){
+            items.style.display = 'flex';
+        }else{
+            items.style.display = 'none';
+        }
+    })
+}
+
+filter.addEventListener('input', filterItems);
 clearBtn.addEventListener('click', clearItems);
 listItem.addEventListener('click', removeItem);
 formItem.addEventListener('submit', addItem);
