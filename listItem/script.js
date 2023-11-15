@@ -3,7 +3,7 @@ let listItem = document.getElementById('list-item');
 let inputField = document.getElementById('input-field');
 let btn = document.querySelector('.btn');
 let filter = document.getElementById('filter');
-let clearBtn = document.getElementById('filter');
+let clearBtn = document.getElementById('clear');
 
 
 function addItem(e) {
@@ -43,6 +43,14 @@ function removeItem(e){
     }
 }
 
+function clearItems(){
+    while(listItem.firstChild){
+        listItem.firstChild.remove(listItem.firstChild);
+    }
+}
+
+
+clearBtn.addEventListener('click', clearItems);
 listItem.addEventListener('click', removeItem);
 formItem.addEventListener('submit', addItem);
 
