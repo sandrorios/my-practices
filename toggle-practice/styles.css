@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    max-width: 500px;
+    margin: 30px auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header {
+
+    width: 100%;
+    text-align: center;
+}
+
+header h1 {
+    font-weight: 300;
+    margin-left: 5px;
+}
+
+p.text {
+    /* width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: red; */
+}
+
+.text {
+    display: flex;
+    width: 45%;
+    background-color: #333;
+    color: #fff;
+    justify-content: center;
+    margin: 10px 10px 5px;
+    padding: 10px;
+
+}
