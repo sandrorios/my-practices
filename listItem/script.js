@@ -4,19 +4,6 @@ let inputField = document.getElementById('input-field');
 let btn = document.querySelector('.btn');
 let filter = document.getElementById('filter');
 let clearBtn = document.getElementById('clear');
-let elements = document.querySelectorAll('#filter');
-
-for(element of elements){
-    element.addEventListener('click', function(){
-        if(!this.dataset.clicked){
-            this.setAttribute('data-clicked', 'true');
-            this.style.background = "#ccc"
-        }else{
-            this.removeAttribute('data-clicked');
-            this.removeAttribute('style');
-        }
-    })
-}
 
 function addItem(e) {
     e.preventDefault();
@@ -32,7 +19,7 @@ function addItem(e) {
     li.appendChild(button);
     inputField.value = '';
     inputField.focus();
-
+    
     checkUI();
 }
 
@@ -67,7 +54,7 @@ function clearItems(){
 function filterItems(e){
     let items = listItem.querySelectorAll('li');
     let text = e.target.value.toLowerCase();
-
+    
     items.forEach((items) =>{
         let itemName = items.firstChild.textContent.toLowerCase();
         if(itemName.indexOf(text)!= -1){
@@ -76,8 +63,9 @@ function filterItems(e){
             items.style.display = 'none';
         }
     })
-
+    
     checkUI();
+
 }
 
 function checkUI(){
