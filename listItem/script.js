@@ -13,7 +13,9 @@ function onItemSubmit(e) {
         return;
     }
 
-    addItemDom(newItem)
+    addItemToDom(newItem)
+
+    addItemToStorage(newItem);
 
     inputField.value = '';
     inputField.focus();
@@ -21,12 +23,28 @@ function onItemSubmit(e) {
     checkUI();
 }
 
-function addItemDom(item){
+function addItemToDom(item){
     let li = document.createElement('li');
     li.appendChild(document.createTextNode(item));
     listItem.appendChild(li);
     let button = createButton('remove-item')
     li.appendChild(button);
+
+    checkUI();
+}
+
+function addItemToStorage(item){
+    let itemsFromStorage;
+
+    if(localStorage.getItem('items') === null){
+        itemsFromStorage = [];
+}else{
+    itemsFromStorage = JSON.parse(localStorage.getItem('item'));
+}
+    itemsFromStorage.push(item);
+
+    localStorage.setItem('items', JSON.stringify(itemsFromStorage));
+
 }
 
 function createButton(classes) {
