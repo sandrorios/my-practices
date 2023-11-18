@@ -30,6 +30,7 @@ function addItemToDom(item){
     
         inputField.value = '';
         inputField.focus();
+
     checkUI();
 }
 
@@ -39,7 +40,7 @@ function addItemToStorage(item){
     if(localStorage.getItem('items') === null){
         itemsFromStorage = [];
 }else{
-    itemsFromStorage = JSON.parse(localStorage.getItem('item'));
+    itemsFromStorage = JSON.parse(localStorage.getItem('items'));
 }
     itemsFromStorage.push(item);
 
