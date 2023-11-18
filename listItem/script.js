@@ -16,9 +16,6 @@ function onItemSubmit(e) {
     addItemToDom(newItem)
 
     addItemToStorage(newItem);
-
-    inputField.value = '';
-    inputField.focus();
     
     checkUI();
 }
@@ -29,7 +26,10 @@ function addItemToDom(item){
     listItem.appendChild(li);
     let button = createButton('remove-item')
     li.appendChild(button);
-
+    
+    
+        inputField.value = '';
+        inputField.focus();
     checkUI();
 }
 
