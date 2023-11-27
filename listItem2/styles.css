@@ -10,3 +10,11 @@
     max-width: 500px;
     margin: 30px auto;
 }
+
+#input-field {
+    outline: none;
+}
+
+#filter {
+    outline: none;
+}
