@@ -11,6 +11,17 @@
     margin: 30px auto;
 }
 
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 300;
+}
+
 p {
     display: flex;
     justify-content: space-between;
@@ -19,13 +30,13 @@ p {
 
 .text {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
-    width: 90%;
+    width: 100%;
     /* border: 1px solid #333; */
     border-radius: 5px;
     padding: 10px;
     background-color: #333;
     color: #fff;
-
+    margin-top: 20px;
 }
