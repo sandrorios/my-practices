@@ -12,9 +12,22 @@
 }
 
 #input-field {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
     outline: none;
 }
 
 #filter {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    padding: 10px;
     outline: none;
 }
