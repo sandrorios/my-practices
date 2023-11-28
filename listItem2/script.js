@@ -15,7 +15,7 @@ function addItem(e) {
     let li = document.createElement('li');
     li.appendChild(document.createTextNode(newItem));
     listItem.appendChild(li);
-    let button = createButton('remove-item');
+    let button = createButton('remove-item text-red');
     li.appendChild(button);
     inputField.value = '';
     inputField.focus();
