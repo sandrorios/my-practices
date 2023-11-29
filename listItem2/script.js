@@ -5,6 +5,10 @@ let filter = document.getElementById('filter');
 let clearBtn = document.getElementById('clear');
 let btn = document.querySelector('.btn');
 
+function displayItems(){
+    const itemsFromStorage = getItemsFromStorage();
+    itemsFromStorage.forEach(item => addItemToDom(item));
+}
 function onItemSubmit(e) {
     e.preventDefault();
     let newItem = inputField.value;
@@ -110,5 +114,5 @@ filter.addEventListener('input', filterItems)
 clearBtn.addEventListener('click', clearItems);
 listItem.addEventListener('click', removeItem);
 formItem.addEventListener('submit', onItemSubmit);
-
+document.addEventListener('DOMContentLoaded', displayItems);
 checkUI();
