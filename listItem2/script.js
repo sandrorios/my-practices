@@ -8,6 +8,8 @@ let btn = document.querySelector('.btn');
 function displayItems(){
     const itemsFromStorage = getItemsFromStorage();
     itemsFromStorage.forEach(item => addItemToDom(item));
+
+    checkUI();
 }
 function onItemSubmit(e) {
     e.preventDefault();
@@ -109,10 +111,16 @@ function checkUI() {
         clearBtn.style.display = 'block';
     }
 }
+// Initialize app
 
-filter.addEventListener('input', filterItems)
-clearBtn.addEventListener('click', clearItems);
-listItem.addEventListener('click', removeItem);
-formItem.addEventListener('submit', onItemSubmit);
-document.addEventListener('DOMContentLoaded', displayItems);
-checkUI();
+function init(){
+
+    filter.addEventListener('input', filterItems)
+    clearBtn.addEventListener('click', clearItems);
+    listItem.addEventListener('click', removeItem);
+    formItem.addEventListener('submit', onItemSubmit);
+    document.addEventListener('DOMContentLoaded', displayItems);
+    checkUI();
+}
+
+init();
