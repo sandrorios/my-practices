@@ -13,6 +13,7 @@ function onItemSubmit(e){
     }
 
     addItemToDom(newItem)
+    addItemToStorage(newItem);
     
     checkUI();
 }
@@ -27,6 +28,17 @@ function addItemToDom(item){
     inputField.value = '';
     inputField.focus();
 
+}
+
+function addItemToStorage(item) {
+    let itemsFromStorage;
+    if(localStorage.getItem('items') === null){
+        itemsFromStorage = [];
+    }else{
+        itemsFromStorage = JSON.parse(localStorage.getItem('items'));
+    }
+    itemsFromStorage.push(item);
+    localStorage.setItem('items', JSON.stringify(itemsFromStorage));
 }
 
 function createButton(classes){
