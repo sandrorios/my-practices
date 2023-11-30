@@ -41,5 +41,12 @@ function removeItem(e){
     }
 }
 
+function clearItems(){
+    while(listItem.firstChild){
+        listItem.firstChild.remove(listItem.firstChild);
+    }
+}
+
 formItem.addEventListener('submit', addItem);
 listItem.addEventListener('click', removeItem);
+clearBtn.addEventListener('click', clearItems);
