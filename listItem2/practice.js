@@ -124,9 +124,13 @@ function checkUI() {
     }
 }
 
-formItem.addEventListener('submit', onItemSubmit);
-listItem.addEventListener('click', onClickItem);
-clearBtn.addEventListener('click', clearItems);
-filter.addEventListener('input', filterItems)
+function init(){
+    formItem.addEventListener('submit', onItemSubmit);
+    listItem.addEventListener('click', onClickItem);
+    clearBtn.addEventListener('click', clearItems);
+    filter.addEventListener('input', filterItems)
 
-checkUI();
+    checkUI();
+}
+
+init();
