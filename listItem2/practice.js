@@ -11,4 +11,9 @@ function addItem(e){
         alert("Please add an item");
         return;
     }
+    let li = document.createElement('li');
+    li.appendChild(document.createTextNode(newItem));
+    listItem.appendChild(li);
 }
+
+formItem.addEventListener('submit', addItem);
