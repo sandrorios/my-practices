@@ -35,13 +35,13 @@ function addItemToDom(item){
     inputField.value = '';
     inputField.focus();
     checkUI();
-    function createButton(classes){
-        let button = document.createElement('button');
-        button.className = classes;
-        let icon = createIcon('fa-solid fa-xmark');
-        button.appendChild(icon);
-        return button;
-    }
+}
+function createButton(classes){
+    let button = document.createElement('button');
+    button.className = classes;
+    let icon = createIcon('fa-solid fa-xmark');
+    button.appendChild(icon);
+    return button;
 }
 
 function createIcon(classes) {

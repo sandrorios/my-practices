@@ -28,6 +28,7 @@ function addItemToDom(item){
     inputField.value = '';
     inputField.focus();
 
+    checkUI();
 }
 
 function addItemToStorage(item) {
@@ -92,6 +93,8 @@ function clearItems(){
     while(listItem.firstChild){
         listItem.firstChild.remove(listItem.firstChild);
     }
+
+    localStorage.removeItem('items');
     checkUI();
 }
 
