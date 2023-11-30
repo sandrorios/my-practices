@@ -3,7 +3,7 @@ let listItem = document.getElementById('list-item');
 let inputField = document.getElementById('input-field');
 let filter = document.getElementById('filter');
 let clearBtn = document.getElementById('clear');
-let btn = document.querySelector('.btn');
+
 
 function displayItems(){
     const itemsFromStorage = getItemsFromStorage();
