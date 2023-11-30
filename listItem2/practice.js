@@ -51,6 +51,21 @@ function clearItems(){
     checkUI();
 }
 
+function filterItems(e){
+    let item = document.querySelectorAll('li');
+    let text = e.target.value.toLowerCase();
+
+    item.forEach((item) =>{
+        let itemName = item.firstChild.textContent.toLowerCase();
+        if(itemName.indexOf(text)!= -1){
+            item.style.display = 'flex';
+        }else{
+            item.style.display = 'none';
+        }
+    })
+    checkUI();
+}
+
 function checkUI() {
     let item = listItem.querySelectorAll('li');
     if(item.length === 0){
@@ -65,5 +80,6 @@ function checkUI() {
 formItem.addEventListener('submit', addItem);
 listItem.addEventListener('click', removeItem);
 clearBtn.addEventListener('click', clearItems);
+filter.addEventListener('input', filterItems)
 
 checkUI();
